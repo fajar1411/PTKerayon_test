@@ -23,6 +23,22 @@ type MatkulRespons struct {
 	JumlahSks      uint   `json:"sks"`
 	DosenNip       string `json:"Nip"`
 }
+type KuliahRespon struct {
+	MatkulKode string `json:"kd_matakuliah"`
+	IndukDosen string `json:"nip"`
+	IndukMhs   string `json:"nim"`
+	NilaiUts   uint   `json:"uts"`
+	NilaiUas   uint   `json:"uas"`
+}
+type ParamRes struct {
+	NamaMataKuliah string `json:"matkul"`
+	KotaAsal       string `json:"kota"`
+	NamaDosen      string `json:"nama_dosen"`
+	NamaMhs        string `json:"nama_mahasiswa"`
+	NilaiUts       uint   `json:"uts"`
+	NilaiUas       uint   `json:"uas"`
+	Nilai          string `json:"total_nilai"`
+}
 
 func ToFormResponse(data model.Mahasiswa) MahasiswaRespons {
 	return MahasiswaRespons{
@@ -52,5 +68,25 @@ func MatkulRequestoFormResponse(data request.MatkulRequest) MatkulRespons {
 		NamaMatakuliah: data.NamaMatakuliah,
 		DosenNip:       data.Nip,
 		JumlahSks:      data.JumlahSks,
+	}
+}
+func KuliahRequestoFormResponse(data request.KuliahRequest) KuliahRespon {
+	return KuliahRespon{
+		NilaiUts:   data.NilaiUts,
+		NilaiUas:   data.NilaiUas,
+		IndukDosen: data.IndukDosen,
+		IndukMhs:   data.IndukMhs,
+		MatkulKode: data.MatkulKode,
+	}
+}
+func ParamRequestoFormResponse(data request.ParamReq) ParamRes {
+	return ParamRes{
+		NilaiUts:       data.NilaiUts,
+		NilaiUas:       data.NilaiUas,
+		NamaDosen:      data.NamaDosen,
+		NamaMhs:        data.NamaMahasiswa,
+		Nilai:          data.Nilai,
+		NamaMataKuliah: data.NamaMatakuliah,
+		KotaAsal:       data.KotaAsal,
 	}
 }

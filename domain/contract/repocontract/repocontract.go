@@ -18,3 +18,9 @@ type RepoMatakuliah interface {
 	AddMatakuliah(newmatkul request.MatkulRequest) (data request.MatkulRequest, err error)
 	KodematkulExist(kode string) bool
 }
+
+type Repokuliah interface {
+	Addkuliah(newkuliah request.KuliahRequest) (data request.KuliahRequest, err error)
+	KuliahExist(kode string) bool
+	ParamReq(Idmhs string) (data request.ParamReq, err error)
+}

@@ -51,3 +51,13 @@ func MatkulmodelToreq(data model.MataKuliah) request.MatkulRequest {
 		JumlahSks:      data.JumlahSks,
 	}
 }
+func KuliahRequestToModel(data request.KuliahRequest) model.Kuliah {
+	return model.Kuliah{
+		KodeKuliah: data.KodeKuliah,
+		MatkulKode: data.MatkulKode,
+		IndukDosen: data.IndukDosen,
+		IndukMhs:   data.IndukMhs,
+		NilaiUts:   data.NilaiUts,
+		NilaiUas:   data.NilaiUas,
+	}
+}

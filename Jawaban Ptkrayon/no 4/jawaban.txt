@@ -1,0 +1,6 @@
+disini sebuah go routine dengan func yang di dalamnya ada sebuah chanel untuk menerima sebuah data bernilai boolean
+dan setelah itu saya membuat pengkodisian untuk menghentikan goroutin tersebut
+jika datanya ada didalam db maka akan mereturn error return data, errors.New("data sudah ada")
+
+untuk jawaban no 4 bapak/ibu bisa mengecek gorutin tersebut di service dosen 
+terima kasih

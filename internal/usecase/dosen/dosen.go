@@ -7,7 +7,6 @@ import (
 	"backend/helper/validasi"
 	"errors"
 	"fmt"
-	"log"
 )
 
 type DosenCase struct {
@@ -44,7 +43,6 @@ func (dc *DosenCase) AddDosen(newRequest request.DosenRequest) (data request.Dos
 
 		for {
 			test <- &datas
-			log.Print("ini test uc", test)
 		}
 	}()
 	test2 := *<-test

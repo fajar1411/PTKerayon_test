@@ -17,3 +17,7 @@ type HandleMahasiswa interface {
 type HandleMatakuliah interface {
 	AddMatakuliah(e echo.Context) error
 }
+type HandlePerkuliahaan interface {
+	AddPerkuliahaan(e echo.Context) error
+	GetParam(e echo.Context) error
+}

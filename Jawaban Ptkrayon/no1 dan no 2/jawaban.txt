@@ -1,0 +1,1 @@
+disini saya membuat sebuah data secara langsung di kodingan yaitu melakukan migrate yang sudah disediakan gorm

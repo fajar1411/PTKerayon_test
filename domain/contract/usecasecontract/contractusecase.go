@@ -16,3 +16,7 @@ type UseCaseDosen interface {
 type UseCaseMatkul interface {
 	AddMatkul(newRequest request.MatkulRequest) (data request.MatkulRequest, err error)
 }
+type UseCasekuliah interface {
+	Addkuliah(newkuliah request.KuliahRequest) (data request.KuliahRequest, err error)
+	ParamReq(Idmhs string) (data request.ParamReq, err error)
+}

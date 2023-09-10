@@ -1,0 +1,9 @@
+disini saya membuat sebuah go routine dengan func yang di dalamnya ada sebuah for range yang batasannya panjang dari data tersebut
+sebelumnya saya sudah membuat sebuah goroutin perulangan secara terus menerus sehingga saya membuat sebuah groutine
+dengan range dan close . maka gorutin tersebut mempunyai batasan sepanjang datanya  dan setelah itu saya close
+runn di terminal seperti berikut
+
+kirim data {samsull 531214 jakarta}
+terima data 531214
+
+https://go-docs.waresix.com/golang-fundamental/konkurensi#sync.waitgroup

@@ -10,5 +10,6 @@ func MigrateDB(db *gorm.DB) {
 	db.AutoMigrate(&model.Mahasiswa{})
 	db.AutoMigrate(&model.Dosen{})
 	db.AutoMigrate(&model.MataKuliah{})
+	db.AutoMigrate(&model.Kuliah{})
 
 }
